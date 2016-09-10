@@ -5,13 +5,12 @@ class UserTest < ActiveSupport::TestCase
     #   assert true
     # end
     def setup
-        @user = User.new(name: 'Example name', email: 'example@email.com',
-                         password: 'opaopa', password_confirmation: 'opaopa')
+        @user = User.new(name: 'Example name', email: 'example@email.com',password: 'opaopa', password_confirmation: 'opaopa')
     end
 
-    test 'user should be valid' do
-        assert @user.valid?
-    end
+    #test 'user should be valid' do
+    #    assert @user.valid?
+    #end
 
     test 'name should not be blank' do
         @user.name = ' '
