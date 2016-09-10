@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class UsersSignupTest < ActionDispatch::IntegrationTest
-    
+
     invalid_params = { params: { user: { name: '', email: '', password: 'asd', password_confirmation: 'akaka' } } }
     valid_params = { params: { user: { name: 'example', email: 'example@email.com', password: 'pass123', password_confirmation: 'pass123' } } }
 
