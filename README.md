@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/thiagoisaias/posts-app.svg?token=PW7PoNcWxCtfxkhMywyK&branch=master)](https://travis-ci.com/thiagoisaias/posts-app)
+
 # Ruby on Rails Tutorial sample application
 
 This is the sample application for
