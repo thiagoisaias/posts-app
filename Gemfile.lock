@@ -214,6 +214,7 @@ DEPENDENCIES
   puma (= 3.4.0)
   rails (= 5.0.0)
   rails-controller-testing (= 0.1.1)
+  rake
   sass-rails (= 5.0.6)
   spring (= 1.7.2)
   spring-watcher-listen (= 2.0.0)
@@ -224,4 +225,4 @@ DEPENDENCIES
   web-console (= 3.1.1)
 
 BUNDLED WITH
-   1.12.5
+   1.13.1
