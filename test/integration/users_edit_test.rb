@@ -22,10 +22,11 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     assert_template 'users/edit'
   end
 
-=begin
   test 'successful edit' do
     get edit_user_path(@user)
     assert_template 'users/edit'
+    name = 'Foo'
+    email = 'foo@email.com'
     patch user_path(@user), params: {
       user: {
         name: name,
@@ -40,5 +41,4 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     assert_equal name, @user.name
     assert_equal email, @user.email
   end
-=end
 end
