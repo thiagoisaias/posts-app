@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   private def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
@@ -16,7 +15,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to the Posts App!"
+      flash[:success] = 'Welcome to the Posts App!'
       redirect_to user_path(@user)
     else
       render 'new'
@@ -27,4 +26,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = 'Profile Updated'
+      redirect_to @user
+    else
+      render 'edit'
+    end
+  end
 end
