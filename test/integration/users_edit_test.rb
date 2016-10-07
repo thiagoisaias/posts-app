@@ -25,8 +25,8 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   test 'successful edit' do
     get edit_user_path(@user)
     assert_template 'users/edit'
-    name = 'Foo'
-    email = 'foo@email.com'
+    name = 'Other'
+    email = 'other@email.com'
     patch user_path(@user), params: {
       user: {
         name: name,
@@ -38,7 +38,7 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     assert_not flash.empty?
     assert_redirected_to @user
     @user.reload
-    assert_equal name, @user.name
-    assert_equal email, @user.email
+    assert_equal @user.name, name
+    assert_equal @user.email, email
   end
 end
