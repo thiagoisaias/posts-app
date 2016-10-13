@@ -13,7 +13,8 @@ class User < ApplicationRecord
               uniqueness: { case_sensitive: false }
     validates :password,
               presence: true,
-              length: { minimum: 6 }
+              length: { minimum: 6 },
+              allow_blank: true
 
     # Returns the hash digest of the given string.
     def self.digest(string)
