@@ -14,9 +14,9 @@ gem 'bcrypt'
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'pg'
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'byebug', '9.0.0', platform: :mri
 end
 
@@ -33,10 +33,6 @@ group :test do
   gem 'guard'
   gem 'guard-minitest'
   gem 'rake'
-end
-
-group :production do
-  gem 'pg', '0.18.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
