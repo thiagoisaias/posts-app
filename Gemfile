@@ -11,6 +11,9 @@ gem 'jbuilder'
 gem 'bootstrap-sass'
 gem 'hirb'
 gem 'bcrypt'
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :development, :test do
   gem 'sqlite3'
