@@ -32,9 +32,11 @@ class User < ApplicationRecord
   end
 
   # Returns true if the given token matches the digest.
-  def authenticated?(remember_token)
+  # Used to authenticate both activation and remember tokens
+  def authenticated?(attr, token)
+    digest = send("#{attr}_digest")
     return false if remember_digest.nil?
-    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+    BCrypt::Password.new(digest).is_password?(token)
   end
 
   private
