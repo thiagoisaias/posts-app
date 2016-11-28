@@ -3,8 +3,12 @@ example:
   name: Example
   email: example@email.com
   password_digest: <%= User.digest('password')%>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 lorem:
   name: Lorem
   email: lorem@email.com
   password_digest: <%= User.digest('password')%>
+  activated: true
+  activated_at: <%= Time.zone.now %>
