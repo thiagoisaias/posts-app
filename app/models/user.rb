@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :microposts
   before_save :downcase_email
   before_create :create_activation_digest
   has_secure_password
