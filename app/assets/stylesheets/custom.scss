@@ -4,6 +4,37 @@
 
 $light-gray: #eaeaea;
 
+/* Microposts */
+
+.microposts{
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid $light-gray;
+  }
+  .user{
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content{
+    display: block;
+    margin-left: 60px;
+  }
+  .timestamp{
+    color: green;
+    display: block;
+    margin-left:60px;
+  }
+}
+
+aside{
+  textarea{
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
 /* Users Index */
 
 .users{
