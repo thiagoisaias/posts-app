@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :microposts, dependent: :destroy
   before_save :downcase_email
   before_create :create_activation_digest
   has_secure_password
@@ -37,6 +38,10 @@ class User < ApplicationRecord
     digest = send("#{attr}_digest")
     return false if remember_digest.nil?
     BCrypt::Password.new(digest).is_password?(token)
+  end
+
+  def feed
+    Micropost.where('user_id = ?', id)
   end
 
   private
