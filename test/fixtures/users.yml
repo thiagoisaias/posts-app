@@ -13,10 +13,16 @@ lorem:
   activated: true
   activated_at: <%= Time.zone.now %>
 
-
 archer:
   name: Archer
   email: archer@email.com
+  password_digest: <%= User.digest('password')%>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+sushi:
+  name: Sushi
+  email: sushi@email.com
   password_digest: <%= User.digest('password')%>
   activated: true
   activated_at: <%= Time.zone.now %>

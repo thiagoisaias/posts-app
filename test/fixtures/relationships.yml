@@ -1,0 +1,15 @@
+one:
+  follower: example
+  followed: lorem
+
+two:
+  follower: example
+  followed: archer
+
+three:
+  follower: archer
+  followed: example
+
+four:
+  follower: archer
+  followed: lorem
